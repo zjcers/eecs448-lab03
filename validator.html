@@ -7,7 +7,7 @@
                 var passwordTag = document.getElementsByName("password")[0];
                 var confirmTag = document.getElementsByName("confirm")[0];
                 var resultTag = document.getElementById("result");
-                if (passwordTag.value === confirmTag.value) {
+                if (passwordTag.value === confirmTag.value && passwordTag.value.length >= 8) {
                     resultTag.classList = ["success"];
                     resultTag.innerText = "Success!";
                 } else {
