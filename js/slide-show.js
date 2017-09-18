@@ -1,21 +1,21 @@
 function CircularSequence(length)
 {
     var index = 0;
-    function next()
+    this.next = function()
     {
         index++;
         if (index >= length)
             index = 0;
         return index;
     }
-    function prev()
+    this.prev = function()
     {
         index--;
         if (index <= 0)
             index = length-1;
         return index;
     }
-    function peek()
+    this.peek = function()
     {
         return index;
     }
@@ -23,19 +23,20 @@ function CircularSequence(length)
 function SlideShow(images)
 {
     var seq = new CircularSequence(images.length);
-    function display()
+    this.display = function()
     {
         var screen = document.getElementById("slide");
-        screen.src = images[seq.peek()];
+        screen.src = "images/" + images[seq.peek()];
     }
-    function next()
+    this.next = function()
     {
         seq.next();
         this.display();
     }
-    function prev()
+    this.prev = function()
     {
         seq.prev();
         this.display();
     }
 }
+slideShow = new SlideShow(["beastie.png", "debian.svg", "Gentoo_Linux_logo_matte.svg", "NetBSD-smaller.png", "openindiana.png"])
