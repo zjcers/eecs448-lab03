@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Execise 1: Password Validator</title>
+        <script>
+            function validate()
+            {
+                var passwordTag = document.getElementsByName("password")[0];
+                var confirmTag = document.getElementsByName("confirm")[0];
+                var resultTag = document.getElementById("result");
+                if (passwordTag.value === confirmTag.value) {
+                    resultTag.classList = ["success"];
+                    resultTag.innerText = "Success!";
+                } else {
+                    resultTag.classList = ["failure"];
+                    resultTag.innerText = "Failure.";
+                }
+            }
+            function reset_validator()
+            {
+                var formTag = document.getElementsByTagName("form")[0];
+                formTag.reset();
+                var resultTag = document.getElementById("result");
+                resultTag.classList = [];
+                resultTag.innerText = "";
+            }
+        </script>
+        <style>
+        p.success {
+            background-color: #62FF68;
+        }
+        p.failure {
+            background-color: #FF9A9A;
+        }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="password" name="password"/>
+            <br/>
+            <input type="password" name="confirm"/>
+            <br/>
+            <p id="result"></p>
+            <input type="button" onclick="validate();" value="Validate"/>
+            <input type="button" onclick="reset_validator();" value="Reset"/>
+        </form>
+    </body>
+</html>
