@@ -16,6 +16,12 @@ div.container {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
 }
+a:hover {
+    background-image: url(../images/tater_profile.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 body {
     background-color: #E9B96E;
 }
