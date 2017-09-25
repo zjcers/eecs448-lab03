@@ -4,3 +4,6 @@ div.controls {
 #controller {
     overflow: auto;
 }
+#ipsum-container {
+    border-style: solid;
+}
