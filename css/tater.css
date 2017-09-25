@@ -1,0 +1,26 @@
+div.left-banner {
+    width: 20vw;
+    height: 98vh;
+    float: left;
+    border-right: #C17D11;
+    border-right-width: 1px;
+    border-right-style: solid;
+    margin-right: 10px;
+}
+#profile-pic {
+    height: auto;
+    width: 100%;
+}
+div.container {
+    color: #2E3436;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+body {
+    background-color: #E9B96E;
+}
+hr {
+    background-color: #C17D11;
+    border: 0;
+    height: 1px;
+}
