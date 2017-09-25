@@ -1,0 +1,6 @@
+div.controls {
+    float: left;
+}
+#controller {
+    overflow: auto;
+}
